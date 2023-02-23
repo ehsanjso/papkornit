@@ -1,0 +1,239 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    background-color:#f6f8ff;
+    position: relative;
+}
+  
+
+#mainPopup {
+    height: 200px;
+    width: 400px;
+    font-family: Helvetica, Ubuntu, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 350px;
+    padding: 10px;
+    padding-top: 0;
+    border-bottom: 1px dashed rgb(119 , 171, 120, .4);
+}
+
+.header h1{
+    color: #7877ab;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.header .icon{
+    height: 50px;
+    border-radius: 25px;
+}
+
+/* #form {
+    width: 400px;
+    padding: 0px 20px;
+}
+
+#form form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#form #txt {
+    display: block;
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 225px;
+    padding: 10px 30px;
+    color: #7877ab;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color:#f6f8ff;
+    box-shadow: -5px -5px 10px    rgba(255,255,255, 0.5) inset, 5px 5px 10px rgb(163,177,198,0.6) inset;
+}
+  
+#form #txt::placeholder {
+    color: #7877ab;
+}
+
+#form #btn {
+  display: block;
+  border: none;
+  outline: none;
+  height: 50px;
+  width: 100px;
+  padding: 10px;
+  color: #7877ab;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 10px;
+  background-color:#f6f8ff;
+  cursor: pointer;
+  box-shadow: -5px -5px 10px    rgba(255,255,255, 0.5), 5px 5px 10px rgb(163,177,198,0.6);
+}
+
+#form #btn:hover {
+  box-shadow: -7px -7px 10px    rgba(255,255,255, 0.5), 7px 7px 10px rgb(163,177,198,0.6);
+}
+
+#form #btn:focus {
+  box-shadow: -5px -5px 10px    rgba(255,255,255, 0.5) inset, 5px 5px 10px rgb(163,177,198,0.6) inset;
+} */
+
+
+.neumorphism-toggle {
+    position: relative;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+    -webkit-transform: scale(var(--scale, 1)) translateZ(0);
+            transform: scale(var(--scale, 1)) translateZ(0);
+  }
+  .neumorphism-toggle:active {
+    --scale: 0.96;
+  }
+  .neumorphism-toggle input {
+    display: none;
+  }
+  .neumorphism-toggle input + label {
+    background: #fff;
+    border-radius: 9px;
+    padding: 16px 0 16px 20px;
+    min-width: 208px;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    box-shadow: -12px -12px 24px var(--light-shadow, transparent), 12px 12px 24px var(--shadow, transparent);
+    -webkit-transition: box-shadow 0.4s;
+    transition: box-shadow 0.4s;
+  }
+  .neumorphism-toggle input + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background: linear-gradient(160deg, #f1f4ff, #f9faff);
+    opacity: var(--gradient, 0);
+    -webkit-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+  }
+  .neumorphism-toggle input + label .switch {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    vertical-align: top;
+    height: 22px;
+    width: 40px;
+    border-radius: 11px;
+    background: #eceffc;
+  }
+  .neumorphism-toggle input + label .switch:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background: -webkit-gradient(linear, left top, right top, from(#4f97ff), to(#275efe));
+    background: linear-gradient(90deg, #4f97ff, #275efe);
+    opacity: var(--gradient, 0);
+    -webkit-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+  }
+  .neumorphism-toggle input + label .switch .dot {
+    background: #d1d6ee;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    left: -1px;
+    top: -1px;
+    -webkit-transform: translateX(var(--offset, 0));
+            transform: translateX(var(--offset, 0));
+    -webkit-transition: box-shadow 0.4s, -webkit-transform 0.4s;
+    transition: box-shadow 0.4s, -webkit-transform 0.4s;
+    transition: transform 0.4s, box-shadow 0.4s;
+    transition: transform 0.4s, box-shadow 0.4s, -webkit-transform 0.4s;
+    box-shadow: -4px -4px 8px var(--light-shadow-2, transparent), 4px 4px 8px var(--shadow, transparent);
+  }
+  .neumorphism-toggle input + label .switch .dot:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background: linear-gradient(160deg, #f1f4ff, #f9faff);
+    opacity: var(--gradient, 0);
+    -webkit-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+  }
+  .neumorphism-toggle input + label span {
+    line-height: 22px;
+    font-size: 16px;
+    color: var(--text, #646b8c);
+    font-weight: 500;
+    display: inline-block;
+    vertical-align: top;
+    z-index: 1;
+    position: relative;
+    margin-left: 12px;
+    -webkit-transition: color 0.4s;
+    transition: color 0.4s;
+  }
+  .neumorphism-toggle input + label + span {
+    text-align: center;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    opacity: 0;
+    font-size: 12px;
+    font-weight: 500;
+    color: #a6accd;
+    -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+    -webkit-transition: opacity 0.4s, -webkit-transform 0.4s;
+    transition: opacity 0.4s, -webkit-transform 0.4s;
+    transition: opacity 0.4s, transform 0.4s;
+    transition: opacity 0.4s, transform 0.4s, -webkit-transform 0.4s;
+  }
+
+  .neumorphism-toggle input:not(:checked) + label + span {
+    opacity: 1;
+    -webkit-transform: translateY(12px);
+            transform: translateY(12px);
+  }
+  
+  .neumorphism-toggle input:checked + label {
+    --offset: 18px;
+    --text: #404660;
+    --gradient: 1;
+    --shadow: rgba(0, 6, 39, 0.1);
+    --light-shadow: rgba(255, 255, 255, 0.8);
+    --light-shadow-2: rgba(255, 255, 255, 0.1);
+  }
