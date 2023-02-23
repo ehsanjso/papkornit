@@ -32,9 +32,11 @@ chrome.tabs.onActivated.addListener(function (tabs) {
 chrome.action.onClicked.addListener(async (tab) => {
   const url = tab.url;
   const movieId = /https:\/\/(?:.*\.|.*)imdb.com\/(?:t|T)itle(?:\?|\/)(..\d+)/i;
-  const imdbID = url.match(movieId)[1];
 
-  chrome.tabs.create({
-    url: `https://t.me/PapkornBot?start=imdb_${imdbID.substring(2)}`,
-  });
+  if (url.match(movieId) !== null) {
+    const imdbID = url.match(movieId)[1];
+    chrome.tabs.create({
+      url: `https://t.me/PapkornBot?start=imdb_${imdbID.substring(2)}`,
+    });
+  }
 });
